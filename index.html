@@ -312,6 +312,32 @@ section.show {
 }
 
 /* add 3 */
+    /* -------------------------------------------------------------- */
+.project-btn {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, color 0.2s;
+  text-decoration: none !important;
+  color: #37ff00 !important;
+}
+
+/* Remove underline for all states */
+.project-btn:link,
+.project-btn:visited,
+.project-btn:hover,
+.project-btn:active,
+.project-btn:focus {
+  text-decoration: none !important;
+}
+/* Hover effect (optional) */
+.project-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 255, 255, 0.18);
+  color: #00ffff !important;
+}
+/* -------------------------------------------------------------- */
 /* -------------------------------------------------------------- */
 
   </style>
@@ -371,6 +397,9 @@ section.show {
     <ul>
       <li><h1>E-commerce Website (AngularJS + .NET)</h1>
         <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum et asperiores quas dicta distinctio eligendi adipisci laboriosam accusantium, nemo sunt.</div>
+          <a href="https://github.com/Kazimsiddiqui" target="_blank" class="project-btn">
+            View on GitHub 
+          </a>
       </li>
       <li><h1>Weather Forecast App using OpenWeatherMap API</h1>
         <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum temporibus eum ab at tenetur ullam quasi distinctio ipsa pariatur maiores?</div>
@@ -506,5 +535,6 @@ section.show {
 
 </body>
 </html>
+
 
 
