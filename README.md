@@ -1,7 +1,7 @@
 # kazimsiddiqui-webspace
 # ✨ Personal Portfolio Website
 
-Welcome to my **personal portfolio** — a digital space where I showcase my skills, learning journey, and professional growth as a **Full-Stack Developer & Cybersecurity Enthusiast** 🌐💻
+Welcome to my **personal portfolio**  a digital space where I showcase my skills, learning journey, and professional growth as a **Full-Stack Developer & Cybersecurity Enthusiast** 🌐💻
 
 This website is built to highlight my projects, achievements, resume, and career story in a clean and modern UI.
 
@@ -64,11 +64,10 @@ This website is built to highlight my projects, achievements, resume, and career
 Let’s connect and build something amazing together 🤝  
 
 **📩 Email:** kazimsiddiqui@gmail.com  
-**🔗 LinkedIn:** *(Add link here)*  
-**👨‍💻 GitHub:** *(Profile link here)*  
+**🔗 LinkedIn:** *https://www.linkedin.com/in/kazim-siddiqui/*  
+**👨‍💻 GitHub:** *https://github.com/Kazimsiddiqui*  
 
 ---
 
 ## ⭐ Support
-If you like this portfolio, consider giving it a **Star ⭐ on GitHub** — it motivates continuous improvement!
-
+If you like this portfolio, consider giving it a **Star ⭐ on GitHub** it motivates continuous improvement!
