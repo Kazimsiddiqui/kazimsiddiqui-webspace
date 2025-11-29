@@ -63,7 +63,7 @@ This website is built to highlight my projects, achievements, resume, and career
 ## 📬 Contact
 Let’s connect and build something amazing together 🤝  
 
-**📩 Email:** kazimsiddiqui@gmail.com  
+**📩 Email:** kazimsiddiqui468@gmail.com  
 **🔗 LinkedIn:** *https://www.linkedin.com/in/kazim-siddiqui/*  
 **👨‍💻 GitHub:** *https://github.com/Kazimsiddiqui*  
 
