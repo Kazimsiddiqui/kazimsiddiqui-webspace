@@ -248,8 +248,7 @@
     .nav-links a:hover::after {
         width: 100%;
     }
-/* -------------------------------------------------------------- */
-/* Simple mobile responsiveness */
+
 @media (max-width: 700px) {
 
   body {
@@ -266,7 +265,7 @@
 
   section {
     padding: 20px;
-    text-align: center; /* ✅ Center content on mobile */
+    text-align: center; /* Center content on mobile */
   }
 
   .nav-links a {
@@ -337,8 +336,25 @@ section.show {
   box-shadow: 0 8px 18px rgba(0, 255, 255, 0.18);
   color: #00ffff !important;
 }
-/* -------------------------------------------------------------- */
-/* -------------------------------------------------------------- */
+.skills-group {
+  margin-bottom: 24px;
+}
+
+.skills-group h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: var(--accent);
+}
+
+.skills-group ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills-group li {
+  padding: 8px 12px;
+}
 
   </style>
 </head>
@@ -375,27 +391,74 @@ section.show {
       </li>
     </ul>
   </section>
+
   <section id="skills" class="skills">
-    <h2 class="section-title">Skills</h2>
+        <h2 class="section-title">Skills</h2>
+
+        <div class="skills-group">
+            <h3>Cybersecurity & Networking</h3>
+            <ul>
+            <li>Patch Management</li>
+            <li>Vulnerability Management</li>
+            <li>Cloud Agent</li>
+            <li>Cloud Security Concepts</li>
+            <li>Networking</li>
+            <li>Firewall Basics</li>
+            <li>Wireshark</li>
+            <li>Linux Administration</li>
+            </ul>
+        </div>
+
+        <div class="skills-group">
+            <h3>Web Development</h3>
+            <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>AngularJS</li>
+            <li>C#</li>
+            <li>ASP.NET MVC</li>
+            <li>SQL Server</li>
+            <li>Python</li>
+            </ul>
+        </div>
+
+        <div class="skills-group">
+            <h3>Tools & Version Control</h3>
+            <ul>
+            <li>Git & GitHub</li>
+            <li>DevOps (Basics)</li>
+            </ul>
+        </div>
+    </section>
+
+  <section id="projects" class="projects">
+    <h2 class="section-title">Projects</h2>
     <ul>
-      <li>Patch Management</li>
-      <li>Vulnerability Management</li>
-      <li>Cloud Agent</li>
-      <li>Networking</li>
-      <li>Wireshark</li>
-      <li>Linux Administration</li>
-      <li>Firewall Basics</li>
-      <li>Cloud Security Concepts</li>
-      <li>HTML5</li>
-      <li>CSS3</li>
-      <li>JavaScript</li>
-      <li>AngularJS</li>
-      <li>C#</li>
-      <li>ASP.NET MVC</li>
-      <li>SQL Server</li>
-      <li>Python</li>
-      <li>DevOps</li>
-      <li>Git & GitHub</li>
+      <li><h1>Weather Forecast App using OpenWeatherMap API</h1>
+        <div>ASP.NET MVC web app that displays current weather and 5-day forecast using OpenWeatherMap API.</div>
+        <a href="https://github.com/Kazimsiddiqui/WeatherForecastApp" target="_blank" class="project-btn">
+          View on GitHub 
+        </a>
+      </li>
+      <li><h1>Library Management Web Application</h1>
+        <div>Developed a web-based system to manage books, members, and transactions including book issue/return. Implemented role-based access, full CRUD operations, and SQL Server integration for data management.</div>
+        <a href="https://github.com/Kazimsiddiqui/librarymanagementsystem" target="_blank" class="project-btn">
+          View on GitHub 
+        </a>
+      </li>
+      <li><h1>Real-Time Form Validation System</h1>
+        <div>A responsive HTML form with real-time JavaScript validation, error feedback, password confirmation checks, and automatic reset for improved user experience.</div>
+        <a href="https://github.com/Kazimsiddiqui/User-Registration-Form" target="_blank" class="project-btn">
+          View on GitHub 
+        </a>
+      </li>
+      <li><h1>Side Projects & Experiments</h1>
+        <div>A collection of mini projects created during my learning journey to strengthen logic building, UI development, and problem-solving skills.</div>
+        <a href="https://github.com/Kazimsiddiqui?tab=repositories" target="_blank" class="project-btn">
+          View on GitHub 
+        </a>
+      </li>
     </ul>
   </section>
 
@@ -544,6 +607,7 @@ section.show {
 
 </body>
 </html>
+
 
 
 
