@@ -352,6 +352,182 @@ section.show {
   padding: 8px 12px;
 }
 
+/* Skills Dropdown */
+
+.skills-group {
+    margin-bottom: 12px;
+}
+
+.skills-group details {
+    border: 1px solid rgba(128, 128, 128, 0.25);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.skills-group summary {
+    padding: 15px 18px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    list-style: none;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+/* Remove default arrow */
+.skills-group summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Custom arrow */
+.skills-group summary::after {
+    content: "+";
+    position: absolute;
+    right: 18px;
+    font-size: 22px;
+    transition: transform 0.3s ease;
+}
+
+/* Change + to × */
+.skills-group details[open] summary::after {
+    content: "×";
+    transform: rotate(90deg);
+}
+
+/* Hover effect */
+.skills-group summary:hover {
+    transform: translateY(-2px);
+    background-color: #00ffff63;
+}
+
+/* Skills inside dropdown */
+.skills-group details ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 5px 18px 18px;
+    margin: 0;
+}
+
+/* Individual skills */
+.skills-group details li {
+    list-style: none;
+    padding: 7px 12px;
+    border-radius: 7px;
+    transition: transform 0.3s ease;
+}
+
+/* Skill hover */
+.skills-group details li:hover {
+    transform: translateY(-3px);
+}
+
+/*Beyond the Code start*/
+/* =========================
+   BEYOND THE CODE
+========================= */
+
+.beyond-code {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.beyond-intro {
+    max-width: 700px;
+    margin: 0 auto 35px;
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+/* Interests Grid */
+
+.interests-grid {
+    max-width: 950px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+/* Interest Card */
+
+.interest-card {
+    padding: 24px 18px;
+    border-radius: 14px;
+
+    border: 1px solid rgba(128, 128, 128, 0.25);
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+/* Icon */
+
+.interest-icon {
+    display: block;
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+/* Heading */
+
+.interest-card h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+}
+
+/* Description */
+
+.interest-card p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    opacity: 0.75;
+}
+
+/* Hover Effect */
+
+.interest-card:hover {
+    transform: translateY(-7px);
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(0, 255, 255, 0.5);
+    /*border-color: #00ffff*/
+    box-shadow: 0 8px 25px rgba(55, 255, 0, 0.08);
+}
+
+@media (max-width: 768px) {
+
+    .beyond-code {
+        padding: 60px 15px;
+    }
+
+    .interests-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .interest-card {
+        padding: 20px 12px;
+    }
+
+    .interest-icon {
+        font-size: 28px;
+    }
+
+    .interest-card h3 {
+        font-size: 16px;
+    }
+
+    .interest-card p {
+        font-size: 13px;
+    }
+}
+/*Beyond the Code end*/
   </style>
 </head>
 <body>
@@ -381,8 +557,11 @@ section.show {
     <ul>
       <li>
         <div>
-            Hi I’m Kazim, a tech enthusiast with a strong interest in cybersecurity, Linux, cloud technologies, and system internals.
-            I love building useful tools, exploring new technologies, and constantly learning.
+              Hey, I’m Kazim 👋 I love getting under the hood of technology and figuring out how things really work. 
+              From Linux, coding and cloud to cybersecurity and system internals, I’m always building something, breaking something, 
+              or learning something new. 🚀💻
+              <br><br>
+              Want to see what I’ve been up to? 👀 Take a look around I’ve put together some of my skills, projects, and experiments below. 🛠️🔥
         </div>
       </li>
     </ul>
@@ -390,10 +569,10 @@ section.show {
 
 <section id="skills" class="skills">
         <h2 class="section-title"> Technical Skills</h2>
-
-        <div class="skills-group">
-            <h3>Cybersecurity & Pentesting Concepts</h3>
-            <ul>
+            <div class="skills-group">
+    <details>
+        <summary>Cybersecurity & Pentesting Concepts</summary>
+        <ul>
             <li>Vulnerability Assessment</li>
             <li>Vulnerability Management</li>
             <li>Cloud Agent</li>
@@ -402,12 +581,14 @@ section.show {
             <li>Patch Management</li>
             <li>Firewall Basics</li>
             <li>Cloud Security Concepts</li>
-            </ul>
-        </div>
+        </ul>
+    </details>
+</div>
 
-        <div class="skills-group">
-            <h3>Web Application Security</h3>
-            <ul>
+<div class="skills-group">
+    <details>
+        <summary>Web Application Security</summary>
+        <ul>
             <li>OWASP Top 10</li>
             <li>SQL Injection</li>
             <li>JavaScript</li>
@@ -416,12 +597,14 @@ section.show {
             <li>IDOR</li>
             <li>API Security Basics (Auth, Tokens, Input Validation)</li>
             <li>Web Application Security Testing</li>
-            </ul>
-        </div>
+        </ul>
+    </details>
+</div>
 
-        <div class="skills-group">
-            <h3>Pentesting Tools</h3>
-            <ul>
+<div class="skills-group">
+    <details>
+        <summary>Pentesting Tools</summary>
+        <ul>
             <li>Nmap</li>
             <li>Metasploit Framework</li>
             <li>Nikto</li>
@@ -429,43 +612,51 @@ section.show {
             <li>Hydra</li>
             <li>John the Ripper</li>
             <li>Wireshark</li>
-            </ul>
-        </div>
+        </ul>
+    </details>
+</div>
 
-        <div class="skills-group">
-            <h3>Networking</h3>
-            <ul>
+<div class="skills-group">
+    <details>
+        <summary>Networking</summary>
+        <ul>
             <li>TCP/IP, OSI Model</li>
             <li>Ports & Protocols</li>
             <li>DNS, HTTP/HTTPS</li>
             <li>Network Scanning & Enumeration</li>
             <li>Networking Fundamentals</li>
-            </ul>
-        </div>
+        </ul>
+    </details>
+</div>
 
-       <div class="skills-group">
-            <h3>Operating Systems & Administration</h3>
-            <ul>
+<div class="skills-group">
+    <details>
+        <summary>Operating Systems & Administration</summary>
+        <ul>
             <li>Linux (Kali Linux)</li>
             <li>Linux Administration</li>
             <li>Windows</li>
             <li>Linux & Windows Privilege Escalation</li>
-            </ul>
-        </div>
+        </ul>
+    </details>
+</div>
 
-       <div class="skills-group">
-            <h3>Programming & Scripting</h3>
-            <ul>
+<div class="skills-group">
+    <details>
+        <summary>Programming & Scripting</summary>
+        <ul>
             <li>C, C++</li>
             <li>Python</li>
             <li>Bash</li>
             <li>JavaScript</li>
-            </ul>
-        </div>
+        </ul>
+    </details>
+</div>
 
-        <div class="skills-group">
-            <h3>Web & Software Development</h3>
-            <ul>
+<div class="skills-group">
+    <details>
+        <summary>Web & Software Development</summary>
+        <ul>
             <li>HTML5, CSS3</li>
             <li>AngularJS</li>
             <li>C#</li>
@@ -474,21 +665,37 @@ section.show {
             <li>API Integration & Consumption</li>
             <li>REST APIs (GET, POST, PUT, DELETE)</li>
             <li>JSON Handling</li>
-            </ul>
-        </div>
+        </ul>
+    </details>
+</div>
 
-        <div class="skills-group">
-            <h3>DevOps & Version Control</h3>
-            <ul>
+<div class="skills-group">
+    <details>
+        <summary>DevOps & Version Control</summary>
+        <ul>
             <li>DevOps Basics</li>
             <li>Git & GitHub</li>
-            </ul>
-        </div>
-  </section>
+        </ul>
+    </details>
+</div>
+        
+</section>
 
   <section id="projects" class="projects">
     <h2 class="section-title">Projects</h2>
     <ul>
+      <li><h1>Hash Verification Tool</h1>
+        <div>Python-based cybersecurity utility for generating MD5, SHA-1, SHA-256, and SHA-512 hashes to verify file integrity.</div>
+        <a href="https://github.com/Kazimsiddiqui/FileHashGenerator" target="_blank" class="project-btn">
+          View on GitHub 
+        </a>
+      </li>
+      <li><h1>Port Scanner</h1>
+        <div>A Python-based TCP port scanning tool that checks whether a specified port on a target host is open or closed.</div>
+        <a href="https://github.com/Kazimsiddiqui/PortScanner" target="_blank" class="project-btn">
+          View on GitHub 
+        </a>
+      </li>
       <li><h1>Weather Forecast App using OpenWeatherMap API</h1>
         <div>ASP.NET MVC web app that displays current weather and 5-day forecast using OpenWeatherMap API.</div>
         <a href="https://github.com/Kazimsiddiqui/WeatherForecastApp" target="_blank" class="project-btn">
@@ -501,12 +708,6 @@ section.show {
           View on GitHub 
         </a>
       </li>
-      <li><h1>Real-Time Form Validation System</h1>
-        <div>A responsive HTML form with real-time JavaScript validation, error feedback, password confirmation checks, and automatic reset for improved user experience.</div>
-        <a href="https://github.com/Kazimsiddiqui/User-Registration-Form" target="_blank" class="project-btn">
-          View on GitHub 
-        </a>
-      </li>
       <li><h1>Side Projects & Experiments</h1>
         <div>A collection of mini projects created during my learning journey to strengthen logic building, UI development, and problem-solving skills.</div>
         <a href="https://github.com/Kazimsiddiqui?tab=repositories" target="_blank" class="project-btn">
@@ -515,6 +716,68 @@ section.show {
       </li>
     </ul>
   </section>
+
+  <section id="beyond-code" class="beyond-code">
+  <h2 class="section-title">Beyond the Code 🌎</h2>
+
+  <p class="beyond-intro">
+    Tech is a big part of my life, but definitely not the whole thing! 😄
+    When I'm away from the keyboard, these are some of the things I enjoy.
+  </p>
+
+  <div class="interests-grid">
+
+    <div class="interest-card">
+      <span class="interest-icon">⚽</span>
+      <h3>Football</h3>
+      <p>Always up for a good match.</p>
+    </div>
+
+    <div class="interest-card">
+      <span class="interest-icon">🏎️</span>
+      <h3>Cars</h3>
+      <p>Love cars, designs and everything that moves fast.</p>
+    </div>
+
+    <div class="interest-card">
+      <span class="interest-icon">🏍️</span>
+      <h3>Bikes</h3>
+      <p>Two wheels, open roads and good rides.</p>
+    </div>
+
+    <div class="interest-card">
+      <span class="interest-icon">⌚</span>
+      <h3>Watches</h3>
+      <p>Always checking out a good timepiece.</p>
+    </div>
+
+    <div class="interest-card">
+      <span class="interest-icon">🌌</span>
+      <h3>Perfumes</h3>
+      <p>I enjoy discovering interesting fragrances.</p>
+    </div>
+
+    <div class="interest-card">
+      <span class="interest-icon">🎬</span>
+      <h3>Animated Movies</h3>
+      <p>Cars, Rio, Madagascar, Ice Age... yes, still a fan! 😄</p>
+    </div>
+
+    <div class="interest-card">
+      <span class="interest-icon">✈️</span>
+      <h3>Traveling</h3>
+      <p>Exploring new places and collecting memories.</p>
+    </div>
+
+    <div class="interest-card">
+      <span class="interest-icon">🦸</span>
+      <h3>Marvel</h3>
+      <p>Superheroes, stories and way too many theories.</p>
+    </div>
+
+  </div>
+</section>
+
   <section id="contact" class="contact">
     <h2 class="section-title">Contact</h2>
     <form class="contact-form">
@@ -625,20 +888,23 @@ section.show {
 
   window.addEventListener("scroll", revealSections);
   window.addEventListener("load", revealSections);
-    //--------------------------------------  
+    //-------------------------------------- 
+
+  const skillDropdowns = document.querySelectorAll('.skills-group details');
+
+  skillDropdowns.forEach(dropdown => {
+    dropdown.addEventListener('toggle', () => {
+      if (dropdown.open) {
+        skillDropdowns.forEach(otherDropdown => {
+          if (otherDropdown !== dropdown) {
+            otherDropdown.removeAttribute('open');
+          }
+        });
+      }
+    });
+  });
+
   </script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
